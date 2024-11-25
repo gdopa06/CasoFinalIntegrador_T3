@@ -2,25 +2,56 @@
 
 URL: https://github.com/gdopa06/CasoFinalIntegrador_T3.git
 
-## Trabajos prácticos
-### 1. Carga de scripts en tiny-lisp
-El módulo Labmain.cpp define la función load_script(), que se utiliza para cargar un script en la memoria y aplicarle la coloración sintáctica. Esta función se basa en la librería estándar de C.
-
-Implementa las funciones load_script() y load_script(filename, true) en CLion, de tal manera que puedas abrir y leer archivos de texto. El primer método toma el nombre de un archivo como entrada del usuario, mientras que el segundo muestra el contenido del archivo. Ambos métodos deben cargar el script en la consola.
-
-void load_script(const char* filename, bool show_script = false);
-void load_script();
-### 2. Asegurando la robustez del código
-Asegúrate de que tu código pueda manejar diferentes tipos de errores de entrada. Esto incluye, pero no se limita a:
-
-1. El usuario proporciona un nombre de archivo que no existe.
-2. El archivo proporcionado no se puede abrir por alguna razón.
-3. Se produce un error de lectura durante la lectura del archivo.
-4. Para manejar estos y otros errores potenciales, es posible que desees agregar comprobaciones de errores adicionales y manejar los fallos de manera más sofisticada.
-
-### Notas
-Este ejercicio no requiere el uso de funciones seguras específicas de Microsoft (las funciones con sufijo _s). En cambio, deberías usar las funciones estándar de C/C++ disponibles en todas las plataformas y compiladores, como fopen, printf y scanf.
-
+<details>
+  <summary>ENUNCIADO DE LOS EJERCICIOS: </summary>
+  <p style="font-size: 12px; line-height: 1.4;">
+    <details>
+      <summary>1. Carga de scripts en tiny-lisp</summary>
+      <p style="font-size: 12px; line-height: 1.4;">
+        El módulo Labmain.cpp define la función <code>load_script()</code>, que se utiliza para cargar un script en la memoria y aplicarle la coloración sintáctica. Esta función se basa en la librería estándar de C.
+        Implementa las funciones <code>load_script()</code> y <code>load_script(filename, true)</code> en CLion, de tal manera que puedas abrir y leer archivos de texto. El primer método toma el nombre de un archivo como entrada del usuario, mientras que el segundo muestra el contenido del archivo. Ambos métodos deben cargar el script en la consola.
+        <code>void load_script(const char* filename, bool show_script = false);</code><br>
+        <code>void load_script();</code>
+      </p>
+    </details>
+    <details>
+      <summary>2. Asegurando la robustez del código</summary>
+      <p style="font-size: 12px; line-height: 1.4;">
+        Asegúrate de que tu código pueda manejar diferentes tipos de errores de entrada. Esto incluye, pero no se limita a:
+        <ul>
+          <li>El usuario proporciona un nombre de archivo que no existe.</li>
+          <li>El archivo proporcionado no se puede abrir por alguna razón.</li>
+          <li>Se produce un error de lectura durante la lectura del archivo.</li>
+        </ul>
+        Para manejar estos y otros errores potenciales, es posible que desees agregar comprobaciones de errores adicionales y manejar los fallos de manera más sofisticada.
+      </p>
+    </details>
+    <details>
+      <summary>Notas</summary>
+      <p style="font-size: 12px; line-height: 1.4;">
+        Este ejercicio no requiere el uso de funciones seguras específicas de Microsoft (las funciones con sufijo <code>_s</code>). En cambio, deberías usar las funciones estándar de C/C++ disponibles en todas las plataformas y compiladores, como <code>fopen</code>, <code>printf</code> y <code>scanf</code>.
+      </p>
+    </details>
+    <details>
+      <summary>Rúbrica</summary>
+      <p style="font-size: 12px; line-height: 1.4;">
+        <strong>Carga de scripts (50 puntos)</strong>
+        <ul>
+          <li>Se proporciona una implementación correcta de <code>load_script(const char* filename, bool show_script = false)</code> que carga correctamente el archivo dado y muestra su contenido si <code>show_script</code> es verdadero. (25 puntos)</li>
+          <li>Se proporciona una implementación correcta de <code>load_script()</code> que solicita al usuario un nombre de archivo, llama a la función <code>load_script(const char* filename, bool show_script = false)</code> y maneja cualquier error de manera apropiada. (25 puntos)</li>
+        </ul>
+        <strong>Manejo de errores (50 puntos)</strong>
+        <ul>
+          <li>El código tiene un manejo de errores sólido y completo para el caso de que el nombre del archivo proporcionado no exista. (15 puntos)</li>
+          <li>El código tiene un manejo de errores sólido y completo para el caso de que el archivo proporcionado no se pueda abrir por alguna razón. (15 puntos)</li>
+          <li>El código tiene un manejo de errores sólido y completo para el caso de que se produzca un error de lectura durante la lectura del archivo. (20 puntos)</li>
+        </ul>
+        <strong>Total: 100 puntos</strong>
+      </p>
+    </details>
+  
+  </p>
+</details>
 
 ## Rúbrica
 Carga de scripts (50 puntos)
