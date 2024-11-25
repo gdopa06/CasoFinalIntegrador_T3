@@ -4,7 +4,6 @@
 #include <string.h>
 #include <errno.h>
 
-// Implementación de load_script
 void load_script(const char* filename, bool show_script) {
     FILE* f = NULL;
     char* script = NULL;
@@ -40,13 +39,13 @@ void load_script(const char* filename, bool show_script) {
     fclose(f);
 
     if (show_script) {
-        printf("\033[34m\033[47m%s\033[0m\n", script); // Color de texto
+        printf("\033[34m\033[47m%s\033[0m\n", script); 
     }
 
     free(script);
 }
 
-// Implementación de load_script_interactive
+
 void load_script_interactive() {
     char filename[500];
 
