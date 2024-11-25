@@ -1,7 +1,5 @@
 # Caso Final Integrador Tema 3
 
-URL: https://github.com/gdopa06/CasoFinalIntegrador_T3.git
-
 <details>
   <summary>ENUNCIADO DE LOS EJERCICIOS: </summary>
   <p style="font-size: 12px; line-height: 1.4;">
