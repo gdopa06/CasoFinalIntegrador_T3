@@ -54,14 +54,15 @@ URL: https://github.com/gdopa06/CasoFinalIntegrador_T3.git
 </details>
 
 
-## Propuesta de solución
-En CLion, las funciones seguras de la biblioteca estándar de C (*_s funciones) generalmente no están disponibles porque estas son específicas de Microsoft y no son estándar de C/C++. Por lo tanto, en lugar de utilizar funciones como fopen_s, printf_s y scanf_s, puedes usar sus equivalentes no seguros, que son fopen, printf y scanf.
-
-A continuación se muestra cómo se podría reescribir el código para CLion:
-```
-#include <iostream>
-#include <string>
-#include <cstdio>
+<details>
+  <summary>Propuesta de solución</summary>
+  <p style="font-size: 12px; line-height: 1.4;">
+    En CLion, las funciones seguras de la biblioteca estándar de C (<code>_s</code> funciones) generalmente no están disponibles porque estas son específicas de Microsoft y no son estándar de C/C++. Por lo tanto, en lugar de utilizar funciones como <code>fopen_s</code>, <code>printf_s</code> y <code>scanf_s</code>, puedes usar sus equivalentes no seguros, que son <code>fopen</code>, <code>printf</code> y <code>scanf</code>.
+    A continuación se muestra cómo se podría reescribir el código para CLion:
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;cstdio&gt;
 
 using namespace std;
 
@@ -74,7 +75,7 @@ struct ColorConsole
 struct ConsoleBox
 {
     void new_text() {/*...*/}
-    void set_text(const string &text) { cout << text << endl; }
+    void set_text(const string &text) { cout &lt;&lt; text &lt;&lt; endl; }
 };
 
 ConsoleBox *consoleBox = new ConsoleBox; // suponemos que ya está inicializado
@@ -88,13 +89,12 @@ void load_script(const char* filename, bool show_script = false)
         f = fopen(filename, "rb");
         if (!f)
         {
-            cerr << "error de apertura de " << filename << endl;
+            cerr &lt;&lt; "error de apertura de " &lt;&lt; filename &lt;&lt; endl;
             return;
         }
-
         int c;
         char buf[4001];
-        while ((c = fread(buf, 1, 4000, f)) > 0)
+        while ((c = fread(buf, 1, 4000, f)) &gt; 0)
         {
             buf[c] = 0;
             script.append(buf);
@@ -104,15 +104,15 @@ void load_script(const char* filename, bool show_script = false)
 
         if (show_script)
         {
-            cout << ColorConsole::fg_blue << ColorConsole::bg_white;
-            cout << script << endl;
+            cout &lt;&lt; ColorConsole::fg_blue &lt;&lt; ColorConsole::bg_white;
+            cout &lt;&lt; script &lt;&lt; endl;
         }
-        consoleBox->new_text();
-        consoleBox->set_text(script);
+        consoleBox-&gt;new_text();
+        consoleBox-&gt;set_text(script);
     }
     catch (...)
     {
-        cerr << "error durante la lectura del archivo" << endl;
+        cerr &lt;&lt; "error durante la lectura del archivo" &lt;&lt; endl;
         if(f)
             fclose(f);
     }
@@ -125,7 +125,10 @@ void load_script()
     scanf("%499s", filename);
     load_script(filename, true);
 }
-```
-Este código debería compilar y funcionar en CLion sin necesidad de agregar la directiva _CRT_SECURE_NO_WARNINGS, ya que no se están utilizando las versiones seguras específicas de Microsoft de las funciones de la biblioteca estándar de C.
+    </pre>
+    Este código debería compilar y funcionar en CLion sin necesidad de agregar la directiva <code>_CRT_SECURE_NO_WARNINGS</code>, ya que no se están utilizando las versiones seguras específicas de Microsoft de las funciones de la biblioteca estándar de C.
+  </p>
+</details>
+
 
 Por último, ten en cuenta que este código no realiza una comprobación completa de errores y no es robusto contra varios tipos de errores de entrada. Dependiendo de tu caso de uso específico, es posible que desees agregar comprobaciones de errores adicionales y manejar los fallos de manera más sofisticada.
