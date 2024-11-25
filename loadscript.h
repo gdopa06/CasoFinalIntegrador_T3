@@ -1,10 +1,9 @@
 #ifndef LOADSCRIPT_H
 #define LOADSCRIPT_H
 
-#include <stdbool.h> // Para usar el tipo `bool`
+#include <stdbool.h>
 
-// Declaraciones de las funciones
-void load_script(const char* filename, bool show_script); // Carga el archivo dado
-void load_script_interactive(); // Solicita el archivo al usuario
+void load_script(const char* filename, bool show_script);
+void load_script_interactive();
 
 #endif // LOADSCRIPT_H
