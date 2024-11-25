@@ -128,5 +128,12 @@ void load_script()
     Este código debería compilar y funcionar en CLion sin necesidad de agregar la directiva <code>_CRT_SECURE_NO_WARNINGS</code>, ya que no se están utilizando las versiones seguras específicas de Microsoft de las funciones de la biblioteca estándar de C.
   </p>
 </details>
+<details>
+  <summary>URL</summary>
+  <p style="font-size: 12px; line-height: 1.4;">
+  ....
+  
+  </p>
+</details>
 
 
