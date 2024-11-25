@@ -101,7 +101,6 @@ void load_script(const char* filename, bool show_script = false)
         }
         fclose(f);
         f = nullptr;
-
         if (show_script)
         {
             cout &lt;&lt; ColorConsole::fg_blue &lt;&lt; ColorConsole::bg_white;
@@ -131,4 +130,3 @@ void load_script()
 </details>
 
 
-Por último, ten en cuenta que este código no realiza una comprobación completa de errores y no es robusto contra varios tipos de errores de entrada. Dependiendo de tu caso de uso específico, es posible que desees agregar comprobaciones de errores adicionales y manejar los fallos de manera más sofisticada.
