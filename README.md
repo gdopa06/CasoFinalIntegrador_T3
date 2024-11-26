@@ -127,6 +127,14 @@ void load_script()
   </p>
 </details>
 <details>
+  <summary>RESOLUCIÓN: </summary>
+  <p style="font-size: 12px; line-height: 1.4;">
+
+  A primera vista, el código está bastante bien estructurado, además, no presenta ningún "error" ni "warning".
+    
+  </p>
+</details>
+<details>
   <summary>URL</summary>
   <p style="font-size: 12px; line-height: 1.4;">
   https://github.com/gdopa06/CasoFinalIntegrador_T3.git
